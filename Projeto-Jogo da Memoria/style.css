@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: gray;
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    position: relative;
+
+    transform-style: preserve-3d; /*habilita o uso do backface, adiciona propriedades 3d*/
+    transition: transform .5s;
+}
+
+.cardBack, .cardFront{
+    width: 100%; /*100% do tamanho do pai*/
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden; /*quando mostra o lado de trás do elemento, habilita o hidden*/
+}
+
+.cardFront{
+    background-color: indigo;
+    font-size: 50px;
+    transform: rotateY(180deg); /*o estado original do card front é com backface e por isso não aparece*/
+}
+
+.cardBack{
+    background-color: royalblue;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flip{
+    transform: rotateY(180deg); /*ao adicionar o flip, o front aparece e o back desaparece*/
+}
+
+#gameBoard{
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
