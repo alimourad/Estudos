@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: wheat;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+
+section {
+    background-image: url('https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-position: 0 -300px;
+    overflow: hidden;
+    height: 500px;
+    /* o float right do formContainter estava escondendo a imagem de background
+    para isso foi adicionado a propriedade overflow:hidden*/
+}
+
+.formContainer {
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+    float: right;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+input[type="submit"]{
+    color:white;
+    background-color: #48C5CE;
+    font-weight: bold;
+}
+
+input, select {
+    display: block;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.picture {
+    width: 160px;
+}
+
+.description{
+    display: inline-block;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 40px;
+}
