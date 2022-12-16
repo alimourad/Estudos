@@ -9,9 +9,17 @@ function setLista(){
     //se a lista for nula, retornar string vazio. Evitar que imprima null na tela.
     listaDeItens = listaDeItens == null ? "" : listaDeItens;
 
+<<<<<<< HEAD
+=======
+    //adicionar o valor do input na variavel e gravar
+>>>>>>> e8dda6ae1418016bb121c33462db566b1dd4f917
     listaDeItens += `<li>${novoItem}</li>`;
     localStorage.setItem("lista", listaDeItens);
+
+    //mostrar a lista na tela
     getLista();
+
+    //limpar o input
     document.getElementById("input").value = "";
 }
 
